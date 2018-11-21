@@ -255,7 +255,7 @@ function GrammarMode(graph, options) {
   this.State = stateClass(graph, options || {})
   this.mcx = new MatchContext
 }
-CodeMirror.GrammarMode = GrammarMode
+require('codemirror').GrammarMode = GrammarMode
 
 GrammarMode.prototype.startState = function() { return this.State.start() }
 
